@@ -801,17 +801,17 @@ from sklearn.metrics import accuracy_score
 from google.colab import files
 uploaded=files.upload()
 
-diabetes_dataset = pd.read_csv(&#x27;diabetes.csv&#x27;)
-diabetes_dataset.head()
+dataset = pd.read_csv(&#x27;diabetes.csv&#x27;)
+dataset.head()
 
-diabetes_dataset.shape
+dataset.shape
 
-diabetes_dataset.describe()
+dataset.describe()
 
-diabetes_dataset[&#x27;Outcome&#x27;].value_counts()
+dataset[&#x27;Outcome&#x27;].value_counts()
 
-X = diabetes_dataset.drop(columns = &#x27;Outcome&#x27;, axis=1)
-Y = diabetes_dataset[&#x27;Outcome&#x27;]
+X = dataset.drop(columns = &#x27;Outcome&#x27;, axis=1)
+Y = dataset[&#x27;Outcome&#x27;]
 
 print(X)
 print(Y)
@@ -819,13 +819,13 @@ print(Y)
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.2, stratify=Y, random_state=2)
 print(X.shape, X_train.shape, X_test.shape)
 
-classifier = svm.SVC(kernel=&#x27;linear&#x27;)
-classifier.fit(X_train, Y_train)
-X_train_prediction = classifier.predict(X_train)
-training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
+model = svm.SVC(kernel=&#x27;linear&#x27;)
+model.fit(X_train, Y_train)
+X_train_prediction = model.predict(X_train)
+training_data_accuracy = model(X_train_prediction, Y_train)
 
 print(&#x27;Accuracy score of the training data : &#x27;, training_data_accuracy)
-X_test_prediction = classifier.predict(X_test)
+X_test_prediction = model.predict(X_test)
 test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
 
 
@@ -835,7 +835,7 @@ input_data_as_numpy_array = np.asarray(input_data)
 
 
 input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-prediction = classifier.predict(input_data_reshaped)
+prediction = model.predict(input_data_reshaped)
 print(prediction)
 if (prediction[0] == 0):
   print(&#x27;The person is not diabetic.&#x27;)
