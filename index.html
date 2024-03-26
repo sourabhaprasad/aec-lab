@@ -822,7 +822,7 @@ print(X.shape, X_train.shape, X_test.shape)
 model = svm.SVC(kernel=&#x27;linear&#x27;)
 model.fit(X_train, Y_train)
 X_train_prediction = model.predict(X_train)
-training_data_accuracy = model(X_train_prediction, Y_train)
+training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
 
 print(&#x27;Accuracy score of the training data : &#x27;, training_data_accuracy)
 X_test_prediction = model.predict(X_test)
