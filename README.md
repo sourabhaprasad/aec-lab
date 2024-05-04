@@ -15,20 +15,28 @@
   Below are descriptions of the experiments:
 </p>
 
+<hr />
+
 ### Plant Iris Leaf Detection Using Decision Tree Classifier
 <p>
   In this experiment, a Decision Tree classifier is implemented for plant leaf iris detection using the Iris dataset. The model is trained with various max depth values, and the optimal depth is determined by evaluating and visualizing the accuracy scores on the test set, resulting in an accuracy of [insert accuracy score]% for the chosen depth.
 </p>
+
+<hr />
 
 ### Car Price Prediction Using Random Forest Regressor
 <p>
   In this experiment, a Random Forest Regressor model was trained on a car price prediction dataset using numerical features. The model achieved a commendable R2 score of [R2Score], indicating its effectiveness in accurately predicting car prices based on the provided input features.
 </p>
 
+<hr />
+
 ### Exam Marks Prediction Using Linear Regression
 <p>
   Investigate and clean a UCI dataset with 100 instances and 3 attributes, targeting student marks, study time, and courses. Build regression models, considering dataset limitations, and evaluate using metrics like R2 and RMSE, highlighting the challenge of accurate predictions with a small dataset while ensuring model applicability.
 </p>
+
+<hr />
 
 ### Diabetes Detection Using SVM
 <p>
